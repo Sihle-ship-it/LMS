@@ -1,7 +1,9 @@
 ﻿using LibraryManagementApi.Data;
+using LibraryManagementApi.DTOs;
 using LibraryManagementApi.Models;
 using System.Linq;
 using System.Web.Http;
+using System.Data.Entity;
 
 namespace LibraryManagementApi.Controllers
 {
@@ -14,7 +16,14 @@ namespace LibraryManagementApi.Controllers
         [Route("")]
         public IHttpActionResult GetBooks()
         {
-            var books = db.Books.Include("Author").ToList();
+            var books = db.Books.Include(b => b.Author).Select(b => new BookDTO
+            {
+                BookID = b.BookID,
+                Title = b.Title,
+                PublishedYear= b.PublishedYear,
+                AuthorName = b.Author.Name
+            }).ToList();
+
             if (!books.Any())
             {
                 return NotFound();

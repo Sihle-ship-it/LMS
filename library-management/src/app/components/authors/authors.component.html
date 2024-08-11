@@ -1,0 +1,15 @@
+<div class="container mt-4" id="authors">
+    <h2>Authors List</h2>
+    <div class="row">
+        <div class="col-md-4" *ngFor="let author of authors">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{ author.Name }}</h5>
+                    <p class="card-text">{{ author.Bio }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+  
