@@ -121,6 +121,39 @@ dist
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+.vs/
+
+[Bb]in/
+[Oo]bj/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.[Cc]ache
+*.bak
+*.ncb
+*.log
+*.vspscc
+*_i.c
+*_p.c
+*_i.h
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vsmdi
+*.mdmp
 
 # yarn v2
 .yarn/cache
